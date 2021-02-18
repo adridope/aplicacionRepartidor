@@ -34,7 +34,6 @@ export default {
       state(){
         APIaxios.getState(this.order.state)
           .then((response) => {
-            console.log(response);
             this.estado=response.data.name;
         })
       }
