@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr v-if="order.customerId == idCustomer">
     <td>{{order.id}}</td>
     <td>{{order.address}}</td>
     <td>{{orders}}</td>
@@ -21,7 +21,11 @@ export default {
     data() {
       return {
         estado:"",
+        idCustomer:"",
       }
+    },
+    created(){
+      this.idCustomer = localStorage.id;
     },
     methods: {
       editOrder() {

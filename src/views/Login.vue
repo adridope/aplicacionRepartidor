@@ -32,6 +32,7 @@ export default {
           if(this.password==response.data.password){
             //alert('inicio de sesión correcto')
             localStorage.token=response.data.token;
+            localStorage.id=response.data.id;
             localStorage.name=response.data.name;
             this.$router.push({ name: 'Listado'});
             location.reload();

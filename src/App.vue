@@ -20,7 +20,7 @@ export default {
     }
   },
   created(){
-    if(localStorage.token){
+    if(localStorage.id){
       this.activeSession=true;
       this.userName = localStorage.name;
     }else{
