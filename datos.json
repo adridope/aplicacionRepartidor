@@ -43,13 +43,24 @@
       "name": "No entregado"
     }
   ],
-  "users": {
-    "id": 1,
-    "email": "repartidor1@gmail.com",
-    "password": "1234",
-    "name": "repartidor",
-    "surname": "numero uno",
-    "rol": "repartidor",
-    "token": "121311414514"
-  }
+  "users": [
+    {
+      "id": 1,
+      "email": "repartidor1@gmail.com",
+      "password": "1234",
+      "name": "repartidor",
+      "surname": "numero uno",
+      "rol": "repartidor",
+      "token": "121311414514"
+    },
+    {
+      "id": 2,
+      "email": "repartidor2@gmail.com",
+      "password": "1234",
+      "name": "Repartidor 2",
+      "surname": "2",
+      "rol": "repartidor",
+      "token": "121311414514"
+    }
+  ]
 }

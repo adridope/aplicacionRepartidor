@@ -28,12 +28,12 @@ export default {
     login(){
       APIaxios.getUser(this.email)
       .then((response)=>{
-        if(this.email==response.data.email){
-          if(this.password==response.data.password){
+        if(this.email==response.data[0].email){
+          if(this.password==response.data[0].password){
             //alert('inicio de sesión correcto')
-            localStorage.token=response.data.token;
-            localStorage.id=response.data.id;
-            localStorage.name=response.data.name;
+            localStorage.token=response.data[0].token;
+            localStorage.id=response.data[0].id;
+            localStorage.name=response.data[0].name;
             this.$router.push({ name: 'Listado'});
             location.reload();
           }else{
