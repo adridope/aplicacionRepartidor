@@ -1,0 +1,55 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "address": "Calle 23 de San Antonio nº 3",
+      "state": 0,
+      "timestamp": "21-1-2021"
+    },
+    {
+      "id": 2,
+      "address": "Calle Aurelio nº 3",
+      "state": 0,
+      "timestamp": "21-1-2021"
+    },
+    {
+      "id": 3,
+      "address": "Avenida Hispanidad nº 3",
+      "state": 0,
+      "timestamp": "21-1-2021"
+    },
+    {
+      "id": 4,
+      "address": "Calle Manolo nº 3",
+      "state": 0,
+      "timestamp": "21-1-2021"
+    }
+  ],
+  "states": [
+    {
+      "id": 0,
+      "name": "Preparado"
+    },
+    {
+      "id": 1,
+      "name": "En ruta"
+    },
+    {
+      "id": 2,
+      "name": "Entregado"
+    },
+    {
+      "id": 3,
+      "name": "No entregado"
+    }
+  ],
+  "users": {
+    "id": 1,
+    "email": "repartidor1@gmail.com",
+    "password": "1234",
+    "name": "repartidor",
+    "surname": "numero uno",
+    "rol": "repartidor",
+    "token": "121311414514"
+  }
+}
