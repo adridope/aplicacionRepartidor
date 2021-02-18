@@ -2,12 +2,33 @@
   <div id="app">
       <div id="nav">
         <router-link to="/">Listado</router-link> |
-        <router-link to="/login">Login</router-link> |
-        <router-link to="/logout">Logout</router-link>  
+        <span v-if="activeSession" class="push" to="/logout">{{ userName }} </span>
+        <router-link v-if="activeSession" to="/logout">Logout</router-link>
+        <router-link v-else to="/login">Login</router-link>
+        
       </div>
       <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return {
+      activeSession:false,
+      userName:""
+    }
+  },
+  created(){
+    if(localStorage.token){
+      this.activeSession=true;
+      this.userName = localStorage.token;
+    }else{
+      this.activeSession=false;
+    }
+  }
+}
+</script>
 
 <style>
 #app {

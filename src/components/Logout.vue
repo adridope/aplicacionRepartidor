@@ -11,6 +11,7 @@ export default {
       close(){
          if(confirm('¿Estas seguro que quieres cerrar sesión?')){
              localStorage.clear();
+             location.reload();
              this.$router.push({ name: 'Login'});
          }
       }

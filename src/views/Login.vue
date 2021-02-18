@@ -30,14 +30,16 @@ export default {
       .then((response)=>{
         if(this.email==response.data.email){
           if(this.password==response.data.password){
-            alert('inicio de sesión correcto')
+            //alert('inicio de sesión correcto')
             localStorage.token=response.data.token;
+            localStorage.name=response.data.name;
             this.$router.push({ name: 'Listado'});
+            location.reload();
           }else{
-            alert('Contraseña incorrecta')
+            //alert('Contraseña incorrecta')
           }
         }else{
-          alert('Correo no registrado')
+          //alert('Correo no registrado')
         }
       })
     }
