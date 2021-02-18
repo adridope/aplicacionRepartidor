@@ -22,7 +22,7 @@ export default {
   created(){
     if(localStorage.token){
       this.activeSession=true;
-      this.userName = localStorage.token;
+      this.userName = localStorage.name;
     }else{
       this.activeSession=false;
     }

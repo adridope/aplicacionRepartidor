@@ -3,7 +3,8 @@
     <td>{{order.id}}</td>
     <td>{{order.address}}</td>
     <td>{{orders}}</td>
-    <td>{{order.timestamp}}</td>
+    <td>{{order.created_at}}</td>
+    <td>{{order.updated_at}}</td>
     <td><button class="btn btn-dark" @click="editOrder">
         <span class="material-icons edit">edit</span>
         </button>
@@ -29,6 +30,7 @@ export default {
       state(){
         APIaxios.getState(this.order.state)
           .then((response) => {
+            console.log(response);
             this.estado=response.data.name;
         })
       }

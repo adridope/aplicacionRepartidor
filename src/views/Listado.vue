@@ -1,15 +1,16 @@
 <template>
   <div class="container">
-    <h1>Listado de pedidos</h1>
+    <h1>Listado de comandas</h1>
       <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12" id="almacen">
+        <div class="col-sm-12 col-md-12 col-lg-12 table-responsive" id="almacen">
             <table class="table table-striped table-hover">
               <thead class="thead-dark bg-primary">
                 <tr>
                 <th>Id</th>
                 <th>Dirección</th>
                 <th>Estado</th>
-                <th>Fecha</th>
+                <th>Día de creación de la comanda</th>
+                <th>Última modificación</th>
                 <th>Editar estado de pedido</th>
                 </tr>
               </thead>
