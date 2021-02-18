@@ -3,25 +3,25 @@
     {
       "id": 1,
       "address": "Calle 23 de San Antonio nº 3",
-      "state": 0,
+      "state": 1,
       "timestamp": "21-1-2021"
     },
     {
       "id": 2,
       "address": "Calle Aurelio nº 3",
-      "state": 0,
+      "state": 1,
       "timestamp": "21-1-2021"
     },
     {
       "id": 3,
       "address": "Avenida Hispanidad nº 3",
-      "state": 0,
+      "state": 1,
       "timestamp": "21-1-2021"
     },
     {
       "id": 4,
       "address": "Calle Manolo nº 3",
-      "state": 0,
+      "state": 1,
       "timestamp": "21-1-2021"
     }
   ],
