@@ -3,10 +3,10 @@
       <h1>Login</h1>
       <form>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Correo" v-model="email" required/>
+          <input type="email" class="form-control" name="email" placeholder="Correo" v-model="credentials.email" required/>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Contraseña" v-model="password" required/>
+          <input type="password" class="form-control" name="password" placeholder="Contraseña" v-model="credentials.password" required/>
         </div>
         <button type="submit" class="btn btn-primary" @click.prevent="login">Iniciar Sesión</button>
       </form>
@@ -20,13 +20,25 @@ export default {
   name: 'Login',
   data(){
     return{
-      email:"",
-      password:""
+      credentials: {
+        email:"",
+        password:""
+      }      
     }
   },
   methods:{
     login(){
-      APIaxios.getUser(this.email)
+      APIaxios.login(this.credentials)
+      .then((response)=>{
+        /*if(response.data==='correcto'){
+          console.log('Mike tiene papitas');
+        }else{
+          console.log('Mike no tiene papitas');
+        }*/
+        console.log(response);
+      });
+
+      /*APIaxios.getUserLocal(this.email)
       .then((response)=>{
         if(this.email==response.data[0].email){
           if(this.password==response.data[0].password){
@@ -42,7 +54,7 @@ export default {
         }else{
           //alert('Correo no registrado')
         }
-      })
+      });*/
     }
   },
   created(){

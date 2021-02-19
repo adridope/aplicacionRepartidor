@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import APIaxios from '../APIaxios.js';
 
 export default {
     name:'order',
@@ -32,10 +31,23 @@ export default {
         this.$router.push({ name: 'EditOrder', params: { order: this.order }})
       },
       state(){
-        APIaxios.getState(this.order.state)
-          .then((response) => {
-            this.estado=response.data.name;
-        })
+        switch(this.order.state) {
+          case "0":
+            this.estado = "EN PREPARACIÓN";
+            break;
+          case "1":
+            this.estado = "LISTO";
+            break;
+          case "2":
+            this.estado = "EN RUTA";
+            break;
+          case "3":
+            this.estado = "ENTREGADO";
+            break;
+          case "4":
+            this.estado = "NO ENTREGADO";
+            break;
+        }
       }
     },
     computed:{

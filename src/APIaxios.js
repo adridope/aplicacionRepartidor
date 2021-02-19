@@ -1,6 +1,5 @@
 import axios from 'axios';
 const baseURLlocal = 'http://localhost:3000/';
-//const baseURL = 'http://http://batoilogic.my/api/';
 const baseURL = 'http://batoilogic.my/api/';
 
 export default {
@@ -8,25 +7,23 @@ export default {
     //return axios.get(baseURL+'orders')
     return axios.get(baseURL+'orders/')
   },
-  getState(id) {
-    return axios.get(baseURLlocal+'states/'+ id)
-  },
-  getUser(email){
+  getUserLocal(email){
     return axios.get(baseURLlocal+'users?email='+ email)
   },
   editOrder(order){
     return axios.put(baseURLlocal+'orders/'+ order.id, order)
+  },
+  login(credentials){
+    //return axios.get(baseURL+'login/'+ credentials)
+    axios.post(baseURL+'login/', {
+      email: credentials.email,
+      password: credentials.password
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 }
-
-/*import axios from 'axios';
-const baseURL = 'http://batoilogic.my/api/productos/';
-
-export default {
-  getProducts() {
-    return axios.get(baseURL)
-  },
-  getProduct(product) {
-    return axios.get(baseURL+product)
-  }
-}*/
