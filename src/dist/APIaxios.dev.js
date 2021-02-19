@@ -22,16 +22,24 @@ var _default = {
   editOrder: function editOrder(order) {
     return _axios["default"].put(baseURLlocal + 'orders/' + order.id, order);
   },
-  login: function login(credentials) {
-    //return axios.get(baseURL+'login/'+ credentials)
-    _axios["default"].post(baseURL + 'login/', {
+  login: function login() {
+    return _axios["default"].get(baseURL + 'login/');
+  } // Intento de realitzar el login en Laravel
+
+  /*login(credentials){
+    //return axios.get(baseURL+'login/'+ credentials);
+    axios.post(baseURL+'login/', {
       email: credentials.email,
       password: credentials.password
-    }).then(function (response) {
+    })
+    .then(function (response) {
+      console.log("error")
       console.log(response);
-    })["catch"](function (error) {
+    })
+    .catch(function (error) {
       console.log(error);
     });
-  }
+  }*/
+
 };
 exports["default"] = _default;

@@ -28,14 +28,16 @@ export default {
   },
   methods:{
     login(){
-      APIaxios.login(this.credentials)
+      //APIaxios.login(this.credentials)
+      APIaxios.login()
       .then((response)=>{
-        /*if(response.data==='correcto'){
-          console.log('Mike tiene papitas');
-        }else{
-          console.log('Mike no tiene papitas');
-        }*/
-        console.log(response);
+        response.data.forEach(userData => {
+          /*console.log(this.credentials.email);
+          console.log(userData.email);*/
+          if(this.credentials.email==userData.email){
+            console.log("Email correcte");
+          }          
+        });
       });
 
       /*APIaxios.getUserLocal(this.email)

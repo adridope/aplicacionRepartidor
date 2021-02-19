@@ -13,17 +13,22 @@ export default {
   editOrder(order){
     return axios.put(baseURLlocal+'orders/'+ order.id, order)
   },
-  login(credentials){
-    //return axios.get(baseURL+'login/'+ credentials)
+  login() {
+    return axios.get(baseURL+'login/')
+  },
+  // Intento de realitzar el login en Laravel
+  /*login(credentials){
+    //return axios.get(baseURL+'login/'+ credentials);
     axios.post(baseURL+'login/', {
       email: credentials.email,
       password: credentials.password
     })
     .then(function (response) {
+      console.log("error")
       console.log(response);
     })
     .catch(function (error) {
       console.log(error);
     });
-  }
+  }*/
 }
