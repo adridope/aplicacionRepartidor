@@ -28,6 +28,7 @@
 
 ***
 
-## Usuario de prueba
+## Usuario para el despliegue
 
-El usuario de prueba está por definir
+<p>nombre: deploy-dealer</p>
+<p>contraseña: 1234</p>
