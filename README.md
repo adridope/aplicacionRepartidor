@@ -1,24 +1,33 @@
-# aplicacion_repartidor
+# APLICACIÓN DEL REPARTIDOR
 
-## Project setup
-```
-npm install
-```
+## Preparación de la aplicacion del repartidor en entorno local
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Primero realizamos el git clone en nuestra máquina:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+>git clone https://github.com/adridope/aplicacionRepartidor.git
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Seguidamente instalamos el node_modules:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+>npm install
+
+### Despues añadimos bootstrap-vue:
+
+>vue add bootstrap-vue
+
+### Y ahora si usamos el siguiente comando empezará su funcionamiento:
+
+>npm run serve
+
+***
+
+## Para acceder a la aplicación desplegada en nuestro servidor
+
+### Simplemente debemos acceder a la siguiente URL:
+
+[Aplicación del repartidor](http://reparto.g03.batoilogic.es/)
+
+***
+
+## Usuario de prueba
+
+El usuario de prueba está por definir
